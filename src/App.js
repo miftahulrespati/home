@@ -8,11 +8,13 @@ import {
   leadership,
   skills,
   getInTouch,
-  experiences
+  experiences,
+  projects,
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
+import ProjectCustom from "./components/home/ProjectCustom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
@@ -29,9 +31,9 @@ const Home = React.forwardRef((props, ref) => {
       <MainBody
         gradient={mainBody.gradientColors}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
-        message={mainBody.message}
+        messages={mainBody.messages}
         icons={mainBody.icons}
-        ref={ref}
+        innerref={ref}
       />
       {about.show && (
         <AboutMe
@@ -42,17 +44,19 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
+      {experiences.show && <Experience experiences={experiences} />}
       {repos.show && (
         <Project
           heading={repos.heading}
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
+        />
+      )}
+      {projects.show && (
+        <ProjectCustom
+          heading={projects.heading}
+          projects={projects.data}
         />
       )}
       {leadership.show && (
@@ -68,9 +72,9 @@ const Home = React.forwardRef((props, ref) => {
           heading={skills.heading}
           hardSkills={skills.hardSkills}
           softSkills={skills.softSkills}
+          otherExperiences={skills.otherExperiences}
         />
       )}
-      
     </>
   );
 });
@@ -80,7 +84,7 @@ const App = () => {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-      {navBar.show && <Navbar ref={titleRef} />}
+      {navBar.show && <Navbar innerref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
       </Routes>

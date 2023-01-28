@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
-import Typist from 'react-typist-component';
+import Typist from "react-typist-component";
 import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
-  ({ gradient, title, message, icons }, ref) => {
+  ({ gradient, title, messages, icons }, innerref) => {
+    const [message, setMessage] = useState(
+      messages[Math.floor(Math.random() * messages.length)]
+    );
+
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setMessage(messages[Math.floor(Math.random() * messages.length)]);
+      }, message.length * 300);
+      return () => clearInterval(intervalId);
+    });
     return (
       <Jumbotron
         fluid
@@ -17,13 +27,11 @@ const MainBody = React.forwardRef(
       >
         <div id="stars"></div>
         <Container className="text-center">
-          <h1 ref={ref} className="display-1">
+          <h1 ref={innerref} className="display-1">
             {title}
           </h1>
-          <Typist>
-            <div className="lead typist">
-              {message}
-            </div>
+          <Typist key={message}>
+            <div className="lead typist">{message}</div>
           </Typist>
           <div className="p-5">
             {icons.map((icon, index) => (
@@ -38,14 +46,14 @@ const MainBody = React.forwardRef(
               </a>
             ))}
           </div>
-          <a
+          {/* <a
             className="btn btn-outline-light btn-lg "
             href="#aboutme"
             role="button"
             aria-label="Learn more about me"
           >
             More about me
-          </a>
+          </a> */}
         </Container>
       </Jumbotron>
     );
