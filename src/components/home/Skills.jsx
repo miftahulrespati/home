@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 const Skills = React.forwardRef(
-  ({ heading, hardSkills, softSkills, otherExperiences }, ref) => {
+  ({ heading, hardSkills, softSkills, otherSkills }, ref) => {
     const skillsTabRef = React.useRef(null);
     const [isScrolled, setIsScrolled] = React.useState(false);
     // const navbarDimensions = useResizeObserver(navbarMenuRef);
@@ -56,7 +56,7 @@ const Skills = React.forwardRef(
               title="Other Interests"
             >
               <Row className="pt-3 px-1">
-                <SkillsTab skills={otherExperiences} />
+                <SkillsTab skills={otherSkills} />
               </Row>
             </Tab>
           </Tabs>

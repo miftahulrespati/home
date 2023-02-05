@@ -12,6 +12,9 @@ const messagesArray = [
   "Life is suffering. It is hard. But still, you find reasons to keep on living.",
   "Nothing that happens is ever forgotten, even if you can't remember it.",
   "Be careful, this may be a dream but you can still lose your head!",
+  "The world is cruel, but I still love you.",
+  "Same things make us laugh, make us cry.",
+  "Just be careful who you change into.",
 ];
 
 // Main Body SECTION
@@ -56,8 +59,7 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/miftahulrespati.png"),
   imageSize: 375,
-  message:
-    "Hardworking engineer graduated with a Bachelor of Applied Engineering in Electro-Mechanics from Polytechnic Institute of Nuclear Technology (STTN-BATAN). Aiming to leverage my academic experience and proven knowledge of engineering and logical thinking to be an excellent developer.",
+  message: `Hardworking engineer graduated with a Bachelor of Applied Engineering in Electro-Mechanics from Polytechnic Institute of Nuclear Technology (STTN-BATAN). Aiming to leverage my academic experience and proven knowledge of engineering and logical thinking to be an excellent developer.`,
   resume: null,
 };
 
@@ -80,8 +82,7 @@ const projects = {
   data: [
     {
       name: "Supplier Portal",
-      description:
-        "Web application used by Matahari Department Store and vendors for supply management.",
+      description: `Web application used by Matahari Department Store and vendors for supply management.`,
       client: "Matahari Department Store",
       partOf: "VisioNet",
       links: null,
@@ -89,8 +90,7 @@ const projects = {
     },
     {
       name: "Mitsubishi Sales Force ID",
-      description:
-        "An application from PT Mitsubishi Motors Krama Yudha Sales Indonesia (MMKSI) which provides information about products and other information regarding sales of Mitsubishi Motors vehicles to assist the sales process.",
+      description: `Provides information about products and other information regarding sales of Mitsubishi Motors vehicles to assist the sales process.`,
       client: "PT Berlian Sistem Indonesia",
       partOf: "Refactory.id",
       links: null,
@@ -98,8 +98,8 @@ const projects = {
     },
     {
       name: "MMKSI Vehicle Tracking System",
-      description:
-        "A system developed to monitor the sending of fleets from the MMKSI carpool to dealers spread throughout Indonesia. This system is intended to provide real-time information related to the delivery process. The mobile application will be used by drivers who make deliveries, then it will send the driver's current location to be displayed in the tracking system in our web application.",
+      description: `A system developed to monitor the sending of fleets from the MMKSI carpool to dealers spread throughout Indonesia. 
+        This system is intended to provide real-time information related to the delivery process.`,
       client: "PT Berlian Sistem Indonesia",
       partOf: "Refactory.id",
       links: null,
@@ -107,8 +107,7 @@ const projects = {
     },
     {
       name: "Misteraladin feature: badges",
-      description:
-        "New feature of the Misteraladin to show badges, e.g. promotion, on flight and train tickets.",
+      description: `New feature of the Misteraladin to show badges, e.g. promotion, on flight and train tickets.`,
       client: "MNC Group",
       partOf: "Refactory.id",
       links: null,
@@ -116,8 +115,8 @@ const projects = {
     },
     {
       name: "Aladinmall Seller Center",
-      description:
-        "Aladin Mall is the first e-commerce and media platform under MNC Group. The feature being worked on in this project is the Seller Center, a store management platform used by shop owners.",
+      description: `Aladin Mall is the first e-commerce and media platform under MNC Group. 
+        The feature being worked on in this project is the Seller Center, a store management platform used by shop owners.`,
       client: "MNC Group",
       partOf: "Refactory.id",
       links: null,
@@ -131,8 +130,7 @@ const projects = {
     },
     {
       name: "Siap Ukur ATR/BPN",
-      description:
-        "Application for ATR/BPN Kanwil Provinsi Kalimantan Timur to improve service quality and file management.",
+      description: `Application for ATR/BPN Kanwil Provinsi Kalimantan Timur to improve service quality and file management.`,
       client: "ATR/BPN Kalimantan Timur",
       partOf: "Refactory.id",
       links: null,
@@ -140,8 +138,8 @@ const projects = {
     },
     {
       name: "Lion Parcel",
-      description:
-        "Web and mobile app to meet the needs of the logistics company, especially in tracking and claim features.\nAnother feature is Bisa Belanja, a shopping platform with delivery throughout Indonesia.",
+      description: `Web and mobile app to meet the needs of the logistics company, especially in tracking and claim features.\n
+        Another feature is Bisa Belanja, a shopping platform with delivery throughout Indonesia.`,
       client: "Lion Parcel",
       partOf: "Refactory.id",
       links: null,
@@ -149,8 +147,7 @@ const projects = {
     },
     {
       name: "Veranita Wang Portfolio Website",
-      description:
-        "A portfolio and semi-personal website owned by beauty influencer Veranita Wang.",
+      description: `A semi-personal portfolio website owned by beauty influencer Veranita Wang.`,
       client: "Veranita Wang",
       partOf: null,
       links: [{ anchor: "Veranita Wang", url: "https://veranitawang.com" }],
@@ -216,7 +213,7 @@ const skills = {
     { name: "Decision making", value: "fas fa-marker", isImage: false },
     { name: "Loving", value: "fas fa-heart", isImage: false },
   ],
-  otherExperiences: [
+  otherSkills: [
     {
       name: "Engineering drawing",
       value: "fas fa-pencil-ruler",
@@ -269,6 +266,29 @@ const experiences = {
   ],
 };
 
+const otherExperiences = {
+  show: false,
+  heading: "Experiences",
+  data: [
+    {
+      role: "Electrical Engineer | PLC Programmer",
+      // companylogo: require("../assets/img/alpha.png"),
+      date: "Dec 2022 - Present",
+    },
+    {
+      role: "Radiation Safety Officer",
+      // companylogo: require("../assets/img/bonne.png"),
+      date: "Nov 2021 - Oct 2022",
+    },
+
+    {
+      role: "Student Intern in Instrumentation Sub-Department",
+      // companylogo: require("../assets/img/medco.png"),
+      date: "Nov 2021 - Oct 2022",
+    },
+  ],
+};
+
 // Blog SECTION
 // const blog = {
 //   show: false,
@@ -284,4 +304,5 @@ export {
   leadership,
   getInTouch,
   experiences,
+  otherExperiences,
 };

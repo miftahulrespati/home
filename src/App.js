@@ -54,10 +54,7 @@ const Home = React.forwardRef((props, ref) => {
         />
       )}
       {projects.show && (
-        <ProjectCustom
-          heading={projects.heading}
-          projects={projects.data}
-        />
+        <ProjectCustom heading={projects.heading} projects={projects.data} />
       )}
       {leadership.show && (
         <Leadership
@@ -72,9 +69,26 @@ const Home = React.forwardRef((props, ref) => {
           heading={skills.heading}
           hardSkills={skills.hardSkills}
           softSkills={skills.softSkills}
-          otherExperiences={skills.otherExperiences}
+          otherSkills={skills.otherSkills}
         />
       )}
+    </>
+  );
+});
+
+const Default = React.forwardRef((props, ref) => {
+  return (
+    <>
+      <Home ref={ref} />
+      <Footer>
+        {getInTouch.show && (
+          <GetInTouch
+            heading={getInTouch.heading}
+            message={getInTouch.message}
+            email={getInTouch.email}
+          />
+        )}
+      </Footer>
     </>
   );
 });
@@ -86,19 +100,12 @@ const App = () => {
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
       {navBar.show && <Navbar innerref={titleRef} />}
       <Routes>
-        <Route path="/" exact element={<Home ref={titleRef} />} />
+        <Route path="/"
+          exact
+          element={<Default ref={titleRef} />} />
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}
       {false && <Route path="/blog/:id" component={BlogPost} />} */}
-      <Footer>
-        {getInTouch.show && (
-          <GetInTouch
-            heading={getInTouch.heading}
-            message={getInTouch.message}
-            email={getInTouch.email}
-          />
-        )}
-      </Footer>
     </BrowserRouter>
   );
 };

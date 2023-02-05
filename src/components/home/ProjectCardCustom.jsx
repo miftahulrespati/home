@@ -9,9 +9,13 @@ const ProjectCardCustom = ({ value }) => {
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
         <Card.Body>
           <Card.Title as="h4">{name} </Card.Title>
-          {partOf && <Card.Subtitle >as part of {partOf}</Card.Subtitle>}
-          <Card.Text className="mt-3">{description}</Card.Text>
-          {links && <CardButtons links={links} />}
+          <Card.Subtitle>
+            {partOf ? `as part of ${partOf}` : <br />}
+          </Card.Subtitle>
+          <Card.Text className="mt-3" style={{ minHeight: 80 }}>
+            {description}
+            {links && <CardButtons links={links} />}
+          </Card.Text>
           <hr />
           {<Technology technologies={technologies} />}
           {value ? <CardFooter client={client} /> : <Skeleton />}
@@ -23,7 +27,8 @@ const ProjectCardCustom = ({ value }) => {
 
 const CardButtons = ({ links }) => {
   return (
-    <div className="d-grid gap-2 d-md-block">
+    <div className="d-grid gap-2 my-3 d-md-block">
+      {/* {d - md - block} */}
       {links.map((link, index) => {
         return (
           <a
@@ -45,7 +50,9 @@ const Technology = ({ technologies }) => {
     <div className="pb-3">
       Technologies:
       {technologies.map((technology) => (
-        <span key={technology} className="badge bg-light text-dark mx-1">{technology}</span>
+        <span key={technology} className="badge bg-light text-dark mx-1">
+          {technology}
+        </span>
       ))}
     </div>
   );
