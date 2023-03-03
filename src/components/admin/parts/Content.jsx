@@ -1,12 +1,16 @@
 import React from "react";
 import { Layout, theme } from "antd";
-import Dashboard from "../Dashboard";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import routes from "../../../routes";
 
 export default () => {
   const element = routes.map((route) => (
-    <Route key={route.id} path={route?.path} exact={route?.exact} element={route?.component} />
+    <Route
+      key={route.id}
+      path={route?.path}
+      exact={route?.exact}
+      element={route?.component}
+    />
   ));
 
   const {

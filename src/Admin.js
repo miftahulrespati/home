@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ConfigProvider, message, FloatButton, Popconfirm } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 import { accounts, menu } from "./editable-stuff/admin";
@@ -53,7 +53,7 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter basename={process.env.PUBLIC_URL + "/admin"}>
+      <HashRouter basename={process.env.PUBLIC_URL + "/admin"}>
         <ConfigProvider
           theme={{
             token: {
@@ -64,7 +64,7 @@ const App = () => {
           {component}
           <Confirm />
         </ConfigProvider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };

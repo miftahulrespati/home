@@ -5,23 +5,17 @@ import SkillsTab from "./SkillsTab";
 import Row from "react-bootstrap/Row";
 import { Jumbotron } from "./migration";
 import { Container } from "react-bootstrap";
-import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 const Skills = React.forwardRef(
   ({ heading, hardSkills, softSkills, otherSkills }, ref) => {
     const skillsTabRef = React.useRef(null);
-    const [isScrolled, setIsScrolled] = React.useState(false);
-    // const navbarDimensions = useResizeObserver(navbarMenuRef);
-
-    useScrollPosition(
-      ({ prevPos, currPos }) => {
-        if (!isScrolled && currPos.y - 400 < 0) setIsScrolled(true);
-      },
-      [],
-      skillsTabRef
-    );
     return (
-      <Jumbotron innerref={skillsTabRef} fluid className="bg-white m-0" id="skills">
+      <Jumbotron
+        innerref={skillsTabRef}
+        fluid
+        className="bg-white m-0"
+        id="skills"
+      >
         <Container className="p-5 ">
           <h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
             {heading}
@@ -31,9 +25,11 @@ const Skills = React.forwardRef(
             defaultActiveKey="hard-skills"
             id="skills-tabs"
             fill
+            justify
           >
             <Tab
               tabClassName="skills-tab lead"
+              // border-bottom-0 bg-white"
               eventKey="hard-skills"
               title="Technical Skills"
             >
@@ -43,6 +39,7 @@ const Skills = React.forwardRef(
             </Tab>
             <Tab
               tabClassName="skills-tab lead"
+              // border-bottom-0 bg-white"
               eventKey="soft-skills"
               title="Soft Skills"
             >
@@ -52,6 +49,7 @@ const Skills = React.forwardRef(
             </Tab>
             <Tab
               tabClassName="skills-tab lead"
+              // border-bottom-0 bg-white"
               eventKey="others"
               title="Other Interests"
             >

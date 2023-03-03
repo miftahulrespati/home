@@ -1,15 +1,16 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import {
   navBar,
   mainBody,
   about,
   repos,
-  leadership,
   skills,
   getInTouch,
   experiences,
   projects,
+  otherExperiences,
+  otherProjects,
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -18,12 +19,10 @@ import ProjectCustom from "./components/home/ProjectCustom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
-// import { Blog } from "./components/blog/Blog";
-// import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
-
 import Experience from "./components/home/Experience";
+import ExperienceCustom from "./components/home/ExperienceCustom";
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -56,14 +55,6 @@ const Home = React.forwardRef((props, ref) => {
       {projects.show && (
         <ProjectCustom heading={projects.heading} projects={projects.data} />
       )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
-        />
-      )}
       {skills.show && (
         <Skills
           heading={skills.heading}
@@ -71,6 +62,15 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
           otherSkills={skills.otherSkills}
         />
+      )}
+      {otherProjects.show && (
+        <ProjectCustom
+          heading={otherProjects.heading}
+          projects={otherProjects.data}
+        />
+      )}
+      {otherExperiences.show && (
+        <ExperienceCustom experiences={otherExperiences} />
       )}
     </>
   );
@@ -97,16 +97,12 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+    <HashRouter basename={process.env.PUBLIC_URL + "/"}>
       {navBar.show && <Navbar innerref={titleRef} />}
       <Routes>
-        <Route path="/"
-          exact
-          element={<Default ref={titleRef} />} />
+        <Route path="/" exact element={<Default ref={titleRef} />} />
       </Routes>
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

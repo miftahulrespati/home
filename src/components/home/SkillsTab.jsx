@@ -19,7 +19,7 @@ function SkillsSection({ skills }) {
   );
 }
 
-function SkillsTab({ skills, isImage }) {
+function SkillsTab({ skills }) {
   const n = 3;
   const result = [[], [], []];
   const itemsPerLine = Math.ceil(skills.length / 3);
@@ -33,13 +33,13 @@ function SkillsTab({ skills, isImage }) {
   return (
     <>
       <Col xs={12} md={4}>
-        <SkillsSection skills={result[0]} isImage={isImage} />
+        <SkillsSection skills={result[0]} />
       </Col>
       <Col xs={12} md={4}>
-        <SkillsSection skills={result[1]} isImage={isImage} />
+        <SkillsSection skills={result[1]} />
       </Col>
       <Col xs={12} md={4}>
-        <SkillsSection skills={result[2]} isImage={isImage} />
+        <SkillsSection skills={result[2]} />
       </Col>
     </>
   );

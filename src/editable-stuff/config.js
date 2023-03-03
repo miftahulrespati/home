@@ -15,6 +15,9 @@ const messagesArray = [
   "The world is cruel, but I still love you.",
   "Same things make us laugh, make us cry.",
   "Just be careful who you change into.",
+  "You know, I'm something of a scientist myself.",
+  "Sticks and stones might break your bones, but words can break your heart.",
+  "Why do we fall? So we can learn to pick ourselves up",
 ];
 
 // Main Body SECTION
@@ -35,7 +38,7 @@ const mainBody = {
     },
     {
       image: "fa-linkedin",
-      url: "https://id.linkedin.com/in/miftahulrespati?trk=public_profile_browsemap/",
+      url: "https://linkedin.com/in/miftahulrespati?trk=public_profile_locale-url",
     },
   ],
 };
@@ -57,9 +60,24 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/miftahulrespati.png"),
+  imageLink: require("./miftahulrespati.png"),
   imageSize: 375,
-  message: `Hardworking engineer graduated with a Bachelor of Applied Engineering in Electro-Mechanics from Polytechnic Institute of Nuclear Technology (STTN-BATAN). Aiming to leverage my academic experience and proven knowledge of engineering and logical thinking to be an excellent developer.`,
+  message: (
+    <>
+      Hi there! Welcome to the portfolio of my professional life.
+      <br />
+      <br />
+      I enjoy taking on challenging problems; nothing is more satisfying than
+      seeing a project come together flawlessly. It feels like being a
+      detective, but instead of catching criminals, I'm catching pesky bugs and
+      solving coding mysteries. Although I cannot promise that every line of
+      code I write will be bug-free, I will put in countless hours of hard work
+      to ensure my code is as clean and efficient as possible.
+      <br />
+      <br />
+      When I am not busy coding, I love cooking and hanging out with my cats.
+    </>
+  ),
   resume: null,
 };
 
@@ -82,11 +100,26 @@ const projects = {
   data: [
     {
       name: "Supplier Portal",
-      description: `Web application used by Matahari Department Store and vendors for supply management.`,
+      description: `Designed for Matahari Department Store and vendors to place direct orders, track order status, and receive reports.`,
       client: "Matahari Department Store",
       partOf: "VisioNet",
       links: null,
-      technologies: ["C#", ".NET", "React.js"],
+      technologies: ["C#", ".NET", "React.js", "PostgreSQL", "Oracle Database"],
+    },
+    {
+      name: "Matahari Companion Portal",
+      description: `Facilitate the management of consignment supplies for both vendors and Matahari Department Store.`,
+      client: "Matahari Department Store",
+      partOf: "VisioNet",
+      links: null,
+      technologies: [
+        "C#",
+        ".NET",
+        "React.js",
+        "MySQL",
+        "Linux Server",
+        "Oracle Database",
+      ],
     },
     {
       name: "Mitsubishi Sales Force ID",
@@ -98,7 +131,7 @@ const projects = {
     },
     {
       name: "MMKSI Vehicle Tracking System",
-      description: `A system developed to monitor the sending of fleets from the MMKSI carpool to dealers spread throughout Indonesia. 
+      description: `Developed to monitor the sending of fleets from the MMKSI carpool to dealers spread throughout Indonesia. 
         This system is intended to provide real-time information related to the delivery process.`,
       client: "PT Berlian Sistem Indonesia",
       partOf: "Refactory.id",
@@ -107,7 +140,7 @@ const projects = {
     },
     {
       name: "Misteraladin feature: badges",
-      description: `New feature of the Misteraladin to show badges, e.g. promotion, on flight and train tickets.`,
+      description: `New feature of Misteraladin App to show badges, e.g. promotion, on flight and train tickets.`,
       client: "MNC Group",
       partOf: "Refactory.id",
       links: null,
@@ -130,7 +163,7 @@ const projects = {
     },
     {
       name: "Siap Ukur ATR/BPN",
-      description: `Application for ATR/BPN Kanwil Provinsi Kalimantan Timur to improve service quality and file management.`,
+      description: `Application for ATR/BPN Kanwil Provinsi Kalimantan Timur to improve service quality and data management.`,
       client: "ATR/BPN Kalimantan Timur",
       partOf: "Refactory.id",
       links: null,
@@ -143,7 +176,7 @@ const projects = {
       client: "Lion Parcel",
       partOf: "Refactory.id",
       links: null,
-      technologies: ["Go", "PostgreSQL"],
+      technologies: ["Go", "PostgreSQL", "Redis"],
     },
     {
       name: "Veranita Wang Portfolio Website",
@@ -156,51 +189,27 @@ const projects = {
   ],
 };
 
-// Leadership SECTION
-const leadership = {
-  show: false,
-  heading: "Leadership",
-  message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
-  images: [
-    {
-      img: require("../editable-stuff/miftahulrespati.png"),
-      label: "First slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-    {
-      img: require("../editable-stuff/miftahulrespati.png"),
-      label: "Second slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-  ],
-  imageSize: {
-    width: "615",
-    height: "450",
-  },
-};
-
 // SKILLS SECTION
 const skills = {
   show: true,
-  heading: "Skills and Other",
+  heading: "Skills",
   hardSkills: [
-    { name: "JavaScript", value: "fab fa-js", isImage: false },
-    { name: "React", value: "fab fa-react", isImage: false },
-    { name: "HTML / CSS", value: "fas fa-file-code", isImage: false },
     {
       name: "C#",
       value: require("../assets/icon/csharp.png"), // source: "https://icons8.com/icon/55204/c-sharp-logo"
       isImage: true,
     },
     { name: "Go", value: require("../assets/icon/go.png"), isImage: true },
+    { name: "JavaScript", value: "fab fa-js", isImage: false },
+    { name: "React (js/ts)", value: "fab fa-react", isImage: false },
     { name: "PHP / Laravel", value: "fab fa-laravel", isImage: false },
+    { name: "HTML / CSS", value: "fas fa-file-code", isImage: false },
     {
       name: "GraphQL",
       value: require("../assets/icon/graphql.png"),
       isImage: true,
     },
-    { name: "SQL and RDBMS", value: "fas fa-database", isImage: false },
+    { name: "SQL and NoSQL", value: "fas fa-database", isImage: false },
   ],
   softSkills: [
     {
@@ -227,9 +236,13 @@ const skills = {
       isImage: false,
     },
     { name: "PLC programming", value: "fas fa-list", isImage: false },
-    { name: "Radiation safety", value: "fas fa-shield-alt", isImage: false },
     {
-      name: "NDT",
+      name: "Radiation safety (Certified)",
+      value: "fas fa-shield-alt",
+      isImage: false,
+    },
+    {
+      name: "NDT (Certified Industrial Radiographer)",
       value: "fas fa-weight",
       isImage: false,
     },
@@ -245,13 +258,15 @@ const skills = {
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
-  message: "Looking for a freelancer? Hit me!",
+  message: `Thanks for taking the time to stop by, and I hope you enjoy your visit! 
+            If you like what you see, feel free to get in touch and chat about how we can collaborate to bring your project to life.
+            I look forward to contributing to your development team. Please don't hesitate to reach out at`,
   email: "miftahulrespati@gmail.com",
 };
 
 const experiences = {
   show: true,
-  heading: "Experiences",
+  heading: "Developer Experience",
   data: [
     {
       role: "Fullstack Developer | IT Support",
@@ -267,28 +282,57 @@ const experiences = {
 };
 
 const otherExperiences = {
-  show: false,
-  heading: "Experiences",
+  show: true,
+  heading: "Other Experience",
   data: [
     {
       role: "Electrical Engineer | PLC Programmer",
-      // companylogo: require("../assets/img/alpha.png"),
-      date: "Dec 2022 - Present",
+      companylogo: require("../assets/img/alpha.jpg"),
+      date: "Feb 2021 - May 2021",
     },
     {
       role: "Radiation Safety Officer",
-      // companylogo: require("../assets/img/bonne.png"),
-      date: "Nov 2021 - Oct 2022",
+      companylogo: require("../assets/img/bonne.png"),
+      date: "Dec 2020",
     },
 
     {
-      role: "Student Intern in Instrumentation Sub-Department",
-      // companylogo: require("../assets/img/medco.png"),
-      date: "Nov 2021 - Oct 2022",
+      role: "Student Intern | Instrumentation Sub-Department",
+      companylogo: require("../assets/img/medco.png"),
+      date: "Jul 2019 - Aug 2019",
     },
   ],
 };
 
+const otherProjects = {
+  show: true,
+  heading: "Other Projects, Volunteer, etc",
+  data: [
+    {
+      name: "Design of Instrumentation and Control System on Kartini Reactor Simulator",
+      description: `
+      Undergraduate final project.
+      Reactors require Instrumentation and Control (I&C) and Reactor Protection System (RPS) to operate safely.
+      Built I&C and RPS of the simulator display phenomena resembling the Kartini Reactor.
+      `,
+      client: null,
+      partOf: null,
+      links: null,
+      technologies: ["Electrical Engineering", "Proteus", "Arduino"],
+    },
+    {
+      name: "Committee Head of Student Industrial Visit by Electro Mechanics Students Community",
+      description: `
+      Successfully organized and led three batches of students on industrial visits to PT INKA Persero, Madiun, Indonesia,
+      resulting in increased knowledge and understanding of the manufacturing process.
+      `,
+      client: null,
+      partOf: null,
+      links: null,
+      technologies: null,
+    },
+  ],
+};
 // Blog SECTION
 // const blog = {
 //   show: false,
@@ -301,8 +345,8 @@ export {
   repos,
   projects,
   skills,
-  leadership,
   getInTouch,
   experiences,
   otherExperiences,
+  otherProjects,
 };
