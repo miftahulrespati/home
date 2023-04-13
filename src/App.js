@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import {
   navBar,
@@ -12,6 +12,7 @@ import {
   otherExperiences,
   otherProjects,
 } from "./editable-stuff/config.js";
+import bloglist from "./editable-stuff/blog";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
@@ -20,11 +21,46 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
 import GetInTouch from "./components/home/GetInTouch.jsx";
-import Leadership from "./components/home/Leadership.jsx";
+import BlogSection from "./components/home/BlogSection.jsx";
 import Experience from "./components/home/Experience";
 import ExperienceCustom from "./components/home/ExperienceCustom";
 
 const Home = React.forwardRef((props, ref) => {
+  let filter = [];
+
+  function shuffle(array) {
+    let currentIndex = array.length,
+      randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
+
+  var blogObj = Object.keys(bloglist);
+  if (blogObj.length > 2) {
+    var random = shuffle(Array.from(Array(blogObj.length).keys()));
+
+    let obj0 = bloglist[blogObj[random[0]]];
+    let obj1 = bloglist[blogObj[random[1]]];
+
+    filter[obj0.id] = obj0;
+    filter[obj1.id] = obj1;
+  } else {
+    filter = bloglist;
+  }
+
   return (
     <>
       <MainBody
@@ -63,11 +99,8 @@ const Home = React.forwardRef((props, ref) => {
           otherSkills={skills.otherSkills}
         />
       )}
-      {otherProjects.show && (
-        <ProjectCustom
-          heading={otherProjects.heading}
-          projects={otherProjects.data}
-        />
+      {Object.keys(bloglist).length > 0 && (
+        <BlogSection heading={"BLOG"} blogs={filter} />
       )}
       {otherExperiences.show && (
         <ExperienceCustom experiences={otherExperiences} />

@@ -18,6 +18,7 @@ const messagesArray = [
   "You know, I'm something of a scientist myself.",
   "Sticks and stones might break your bones, but words can break your heart.",
   "Why do we fall? So we can learn to pick ourselves up",
+  "Sumbangsihku 'tak berharga. Namun, keikhlasanku nyata.",
 ];
 
 // Main Body SECTION
@@ -104,7 +105,7 @@ const projects = {
       client: "Matahari Department Store",
       partOf: "VisioNet",
       links: null,
-      technologies: ["C#", ".NET", "React.js", "PostgreSQL", "Oracle Database"],
+      technologies: ["C#", ".NET", "React.js", "PostgreSQL"],
     },
     {
       name: "Matahari Companion Portal",
@@ -118,7 +119,6 @@ const projects = {
         "React.js",
         "MySQL",
         "Linux Server",
-        "Oracle Database",
       ],
     },
     {
