@@ -17,7 +17,7 @@ const messagesArray = [
   "Just be careful who you change into.",
   "You know, I'm something of a scientist myself.",
   "Sticks and stones might break your bones, but words can break your heart.",
-  "Why do we fall? So we can learn to pick ourselves up",
+  "Why do we fall? So we can learn to pick ourselves up.",
   "Sumbangsihku 'tak berharga. Namun, keikhlasanku nyata.",
 ];
 
@@ -30,16 +30,20 @@ const mainBody = {
   messages: messagesArray,
   icons: [
     {
-      image: "fa-github",
+      image: "fab fa-github",
       url: "https://github.com/miftahulrespati/",
     },
     {
-      image: "fa-instagram",
+      image: "fab fa-instagram",
       url: "https://instagram.com/miftahulrespati/",
     },
     {
-      image: "fa-linkedin",
+      image: "fab fa-linkedin",
       url: "https://linkedin.com/in/miftahulrespati?trk=public_profile_locale-url",
+    },
+    {
+      image: "fas fa-laptop",
+      url: "https://www.upwork.com/freelancers/~01e71cc17d90dda278",
     },
   ],
 };
@@ -113,13 +117,7 @@ const projects = {
       client: "Matahari Department Store",
       partOf: "VisioNet",
       links: null,
-      technologies: [
-        "C#",
-        ".NET",
-        "React.js",
-        "MySQL",
-        "Linux Server",
-      ],
+      technologies: ["C#", ".NET", "React.js", "MySQL", "Linux Server"],
     },
     {
       name: "Mitsubishi Sales Force ID",

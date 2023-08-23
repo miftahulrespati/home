@@ -1,7 +1,7 @@
 const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
 const repoURL = "https://github.com/miftahulrespati/miftahulrespati.github.io.git";
-const commitMessage = "Add second blog";
+const commitMessage = "Republish after pushed to repo";
 
 ghpages.publish(
   pathname,
