@@ -5,6 +5,7 @@ export default new BlogBuilder({
   title:
     "The Power of Complementary Roles: Why Nuclear and Renewables Should Work Together",
   cover: require("../../assets/blog/nuclear-renewable-complementary/nuclear-renewable-both-button.png"),
+  publishedDate: "2023-04-05",
   description: (
     <>
       Pursuing a green future with high energy needs is a global challenge

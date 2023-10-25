@@ -76,10 +76,10 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <img src={logo} style={{ maxWidth: 50 }} />
+            <img src={logo} alt="" style={{ maxWidth: 50 }} />
           </Box>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <img src={logo} style={{ maxWidth: 50, marginLeft: 50 }} />
+            <img src={logo} alt="" style={{ maxWidth: 50, marginLeft: 50 }} />
           </Box>
 
           <Box sx={{ display: { xs: "none", md: "flex" }, marginLeft: 5 }}>

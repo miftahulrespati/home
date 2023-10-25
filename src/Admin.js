@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashRouter } from "react-router-dom";
 import { ConfigProvider, message, FloatButton, Popconfirm } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
@@ -7,9 +7,15 @@ import { accounts, menu } from "./editable-stuff/admin";
 import Main from "./components/admin/Main";
 import Login from "./components/admin/Login";
 
-const App = () => {
+const Admin = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [account, setAccount] = useState();
+
+  function Initial() {
+    useEffect(() => {
+      document.title = "Admin Panel Demo - Miftahul Respati's Portfolio";
+    }, []);
+  }
 
   const onLogin = (account) => {
     message.success(`Welcome ${account.username}`);
@@ -54,6 +60,7 @@ const App = () => {
   return (
     <>
       <HashRouter basename={process.env.PUBLIC_URL + "/admin"}>
+        <Initial />
         <ConfigProvider
           theme={{
             token: {
@@ -69,4 +76,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Admin;

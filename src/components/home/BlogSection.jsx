@@ -19,7 +19,7 @@ const BlogSection = ({ heading, blogs }) => {
             className="btn btn-outline-secondary mx-auto"
             // style={{ width: "" }}
           >
-            <i className="fas fa-paper-plane" /> To The WIRED THOUGHTS
+            <i className="fas fa-paper-plane" /> To THE WIRED THOUGHTS
           </a>
         </span>
       </Container>

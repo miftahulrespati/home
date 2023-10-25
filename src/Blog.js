@@ -9,6 +9,7 @@ const Blogjees = () => {
     const { pathname } = useLocation();
     useEffect(() => {
       window.scrollTo(0, 0);
+      document.title = 'The Wired Thoughts';
     }, [pathname]);
 
     return null;

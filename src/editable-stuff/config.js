@@ -19,6 +19,8 @@ const messagesArray = [
   "Sticks and stones might break your bones, but words can break your heart.",
   "Why do we fall? So we can learn to pick ourselves up.",
   "Sumbangsihku 'tak berharga. Namun, keikhlasanku nyata.",
+  "The wound is the place where the light enters you.",
+  "Love is composed of a single soul inhabiting two bodies."
 ];
 
 // Main Body SECTION
@@ -41,10 +43,10 @@ const mainBody = {
       image: "fab fa-linkedin",
       url: "https://linkedin.com/in/miftahulrespati?trk=public_profile_locale-url",
     },
-    {
-      image: "fas fa-laptop",
-      url: "https://www.upwork.com/freelancers/~01e71cc17d90dda278",
-    },
+    // {
+    //   image: "fas fa-laptop",
+    //   url: "https://www.upwork.com/freelancers/~01e71cc17d90dda278",
+    // },
   ],
 };
 
@@ -193,7 +195,7 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     {
-      name: "C#",
+      name: "C# / .NET",
       value: require("../assets/icon/csharp.png"), // source: "https://icons8.com/icon/55204/c-sharp-logo"
       isImage: true,
     },
@@ -201,7 +203,7 @@ const skills = {
     { name: "JavaScript", value: "fab fa-js", isImage: false },
     { name: "React (js/ts)", value: "fab fa-react", isImage: false },
     { name: "PHP / Laravel", value: "fab fa-laravel", isImage: false },
-    { name: "HTML / CSS", value: "fas fa-file-code", isImage: false },
+    { name: "HTML & CSS", value: "fas fa-file-code", isImage: false },
     {
       name: "GraphQL",
       value: require("../assets/icon/graphql.png"),

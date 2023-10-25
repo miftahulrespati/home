@@ -4,6 +4,7 @@ export default new BlogBuilder({
   id: "windows-lubuntu-comparison",
   title: "Windows 8.1 and Lubuntu 20.04 Performance on an Old Laptop",
   cover: require("../../assets/blog/windows-lubuntu-comparison/bios.jpg"),
+  publishedDate: "2023-03-16",
   description: (
     <>
       A performance test was conducted to compare the resource usage of Windows

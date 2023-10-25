@@ -1,7 +1,8 @@
 const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
-const repoURL = "https://github.com/miftahulrespati/miftahulrespati.github.io.git";
-const commitMessage = "Add google analytics";
+const repoURL =
+  "https://github.com/miftahulrespati/miftahulrespati.github.io.git";
+const commitMessage = "Fix not found page";
 
 ghpages.publish(
   pathname,
@@ -12,6 +13,6 @@ ghpages.publish(
   },
   (err) => {
     if (err) console.log("ERROR: ", err);
-    else console.log("PUBLISHED");
+    else console.log(`PUBLISHED: ${commitMessage || "Updates"}`);
   }
 );

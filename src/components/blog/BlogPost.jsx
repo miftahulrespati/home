@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
+import moment from "moment";
 import bloglist from "../../editable-stuff/blog";
 const BlogPost = () => {
   const { id } = useParams();
   const post = bloglist[id];
+
+  function Title(title) {
+    useEffect(() => {
+      document.title = `${title} - The Wired Thoughts`;
+    }, [title]);
+  }
+
+  if (post) Title(post.title);
+  else Title("Not found");
 
   return (
     <>
@@ -16,7 +26,10 @@ const BlogPost = () => {
           style={{ maxWidth: "90%" }}
         >
           <div className="container-md" style={{ maxWidth: "960px" }}>
-            <h1 className="display-4 text-center pt-5">{post.title}</h1>
+            <h1 className="display-5 text-center pt-5">{post.title}</h1>
+            <p className="text-center">
+              {moment(post.publishedDate).format("DD MMMM YYYY")}
+            </p>
             <div
               style={{
                 display: "flex",
@@ -35,9 +48,29 @@ const BlogPost = () => {
           </div>
         </div>
       ) : (
-        <h1 className="display-1 text-center m-5 text-light">
-          404 - Page not found
-        </h1>
+        <div>
+          <h1 className="display-1 text-center m-5 text-dark">
+            404 <br />
+            Page not found
+          </h1>
+          <div
+            className="row justify-content-around mx-auto"
+            style={{ width: "60%" }}
+          >
+            <a
+              href={"/"}
+              className="btn btn-outline-secondary my-3 mx-auto col-lg-4"
+            >
+              <i className="fa fa-home" /> Back to Portfolio
+            </a>
+            <a
+              href={"/#/blog"}
+              className="btn btn-outline-secondary my-3 mx-auto col-lg-4"
+            >
+              <i className="fas fa-paper-plane" /> THE WIRED THOUGHTS
+            </a>
+          </div>
+        </div>
       )}
     </>
   );

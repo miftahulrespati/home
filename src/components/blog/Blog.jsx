@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import moment from "moment";
 import bloglist from "../../editable-stuff/blog";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
+  const sortedBlogs = Object.entries(bloglist).sort((a, b) =>
+    moment(b[1].publishedDate).diff(moment(a[1].publishedDate))
+  );
+
   return (
     <>
       <div
@@ -12,8 +17,8 @@ const Blog = () => {
                   shadow-lg`}
         style={{ maxWidth: "90%" }}
       >
-        <h1 className="text-center pt-5">Wired Thoughts</h1>
-        {Object.entries(bloglist).map(([id, value], index) => {
+        <h1 className="text-center pt-5">The Wired Thoughts</h1>
+        {sortedBlogs.map(([id, value], index) => {
           return (
             <BlogCard
               key={index}
@@ -21,6 +26,7 @@ const Blog = () => {
               description={value.description}
               index={id}
               cover={value.cover}
+              publishedDate={value.publishedDate}
             />
           );
         })}
@@ -29,7 +35,7 @@ const Blog = () => {
   );
 };
 
-const BlogCard = ({ index, title, cover, description }) => {
+const BlogCard = ({ index, title, cover, description, publishedDate }) => {
   const [titleColor, setTitleColor] = useState("#373b3e");
 
   return (
@@ -54,6 +60,7 @@ const BlogCard = ({ index, title, cover, description }) => {
             </h2>
           </Link>
           <p className="lead">{description}</p>
+          <p>{moment(publishedDate).format("DD MMMM YYYY")}</p>
           {/* </div> */}
         </div>
       </div>
