@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HashRouter } from "react-router-dom";
 import { ConfigProvider, message, FloatButton, Popconfirm } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
-import { accounts, menu } from "./editable-stuff/admin";
+import { accounts, menu } from "./editable-stuff/admin-config";
 
 import Main from "./components/admin/Main";
 import Login from "./components/admin/Login";

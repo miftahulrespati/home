@@ -20,7 +20,7 @@ const messagesArray = [
   "Why do we fall? So we can learn to pick ourselves up.",
   "Sumbangsihku 'tak berharga. Namun, keikhlasanku nyata.",
   "The wound is the place where the light enters you.",
-  "Love is composed of a single soul inhabiting two bodies."
+  "Love is composed of a single soul inhabiting two bodies.",
 ];
 
 // Main Body SECTION
@@ -111,7 +111,7 @@ const projects = {
       client: "Matahari Department Store",
       partOf: "VisioNet",
       links: null,
-      technologies: ["C#", ".NET", "React.js", "PostgreSQL"],
+      technologies: ["C#", ".NET", "React TS", "PostgreSQL"],
     },
     {
       name: "Matahari Companion Portal",
@@ -119,7 +119,7 @@ const projects = {
       client: "Matahari Department Store",
       partOf: "VisioNet",
       links: null,
-      technologies: ["C#", ".NET", "React.js", "MySQL", "Linux Server"],
+      technologies: ["C#", ".NET", "React JS", "MySQL", "Linux Server"],
     },
     {
       name: "Mitsubishi Sales Force ID",
@@ -201,7 +201,7 @@ const skills = {
     },
     { name: "Go", value: require("../assets/icon/go.png"), isImage: true },
     { name: "JavaScript", value: "fab fa-js", isImage: false },
-    { name: "React (js/ts)", value: "fab fa-react", isImage: false },
+    { name: "React (JS/TS)", value: "fab fa-react", isImage: false },
     { name: "PHP / Laravel", value: "fab fa-laravel", isImage: false },
     { name: "HTML & CSS", value: "fas fa-file-code", isImage: false },
     {
@@ -269,9 +269,9 @@ const experiences = {
   heading: "Developer Experience",
   data: [
     {
-      role: "Fullstack Developer | IT Support",
+      role: "Full Stack Developer | IT Support",
       companylogo: require("../assets/img/visionet.png"),
-      date: "Dec 2022 - Present",
+      date: "Dec 2022 - Nov 2023",
     },
     {
       role: "Web Developer | Software Engineer",

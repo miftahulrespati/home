@@ -2,7 +2,7 @@ import React from "react";
 import { isMobile } from "react-device-detect";
 import { Button, Form, Input, Space, message, Modal } from "antd";
 import logo from "../../assets/img/logo512.png";
-import { accounts } from "../../editable-stuff/admin";
+import { accounts } from "../../editable-stuff/admin-config";
 
 const Login = (props: {
   onFinish: any;

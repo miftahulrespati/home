@@ -12,7 +12,7 @@ import {
   otherExperiences,
   otherProjects,
 } from "./editable-stuff/config.js";
-import bloglist from "./editable-stuff/blog";
+import bloglist from "./editable-stuff/blog-config.jsx";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import moment from "moment";
-import bloglist from "../../editable-stuff/blog";
+import bloglist from "../../editable-stuff/blog-config";
 const BlogPost = () => {
   const { id } = useParams();
   const post = bloglist[id];
