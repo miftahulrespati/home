@@ -62,6 +62,7 @@ const Dashboard = () => {
             <div className="d-flex justify-content-around">
               <img
                 src={illustration}
+                alt=""
                 style={{
                   border: "1px solid #ddd",
                   borderRadius: "5%",

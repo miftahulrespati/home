@@ -106,6 +106,14 @@ const projects = {
   heading: "Projects Involved",
   data: [
     {
+      name: "OneHCM",
+      description: `OneHCM is an end-to-end HR application that provides robust, configurable solutions for various HR transactions.`,
+      client: "Several Clients",
+      partOf: "WCS",
+      links: [{ anchor: "OneHCM.id", url: "https://www.onehcm.id/" }],
+      technologies: ["React JS"],
+    },
+    {
       name: "Supplier Portal",
       description: `Designed for Matahari Department Store and vendors to place direct orders, track order status, and receive reports.`,
       client: "Matahari Department Store",
@@ -268,6 +276,11 @@ const experiences = {
   show: true,
   heading: "Developer Experience",
   data: [
+    {
+      role: "Technical Consultant | Front-end Developer",
+      companylogo: require("../assets/img/wcs.png"),
+      date: "March 2024 - Present",
+    },
     {
       role: "Full Stack Developer | IT Support",
       companylogo: require("../assets/img/visionet.png"),

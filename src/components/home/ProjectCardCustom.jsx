@@ -12,12 +12,12 @@ const ProjectCardCustom = ({ value }) => {
           <Card.Subtitle>
             {partOf ? `as part of ${partOf}` : <br />}
           </Card.Subtitle>
-          <Card.Text className="mt-3" style={{ minHeight: 80 }}>
+          <Card.Text className="mt-3" style={{ minHeight: 110 }}>
             {description}
             {links && <CardButtons links={links} />}
           </Card.Text>
           <hr />
-          <div style={{ height: 42 }}>
+          <div className="my-3" style={{ height: 42 }}>
             {technologies && <Technology technologies={technologies} />}
           </div>
           {value.client ? <CardFooter client={client} /> : <Skeleton />}
