@@ -3,14 +3,15 @@ import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 
 const ProjectCardCustom = ({ value }) => {
-  const { name, description, client, partOf, links, technologies } = value;
+  const { name, description, client, partOf, role, links, technologies } =
+    value;
   return (
     <Col lg={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
         <Card.Body>
           <Card.Title as="h4">{name} </Card.Title>
           <Card.Subtitle>
-            {partOf ? `as part of ${partOf}` : <br />}
+            {partOf && `part of ${partOf} as `} {role}
           </Card.Subtitle>
           <Card.Text className="mt-3" style={{ minHeight: 110 }}>
             {description}
