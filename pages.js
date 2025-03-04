@@ -2,7 +2,7 @@ const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
 const repoURL =
   "https://github.com/miftahulrespati/miftahulrespati.github.io.git";
-const commitMessage = "Add WCS to work experience";
+const commitMessage = "Add role per project";
 
 ghpages.publish(
   pathname,

@@ -71,15 +71,13 @@ const about = {
   imageSize: 375,
   message: (
     <>
-      Hi there! Welcome to the portfolio of my professional life.
+      Hi there! Welcome to my portfolio.
       <br />
       <br />
       I enjoy taking on challenging problems; nothing is more satisfying than
-      seeing a project come together flawlessly. It feels like being a
-      detective, but instead of catching criminals, I'm catching pesky bugs and
-      solving coding mysteries. Although I cannot promise that every line of
-      code I write will be bug-free, I will put in countless hours of hard work
-      to ensure my code is as clean and efficient as possible.
+      seeing a project come together flawlessly. Although I cannot promise that
+      every line of code I write will be bug-free, I will put in countless hours
+      of hard work to ensure my code is as clean and efficient as possible.
       <br />
       <br />
       When I am not busy coding, I love cooking and hanging out with my cats.
@@ -287,7 +285,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message: `Thanks for taking the time to stop by, and I hope you enjoy your visit! 
-            If you like what you see, feel free to get in touch and chat about how we can collaborate to bring your project to life.
+            If you like what you see, feel free to get in touch and chat about how we can collaborate.
             I look forward to contributing to your development team. Please don't hesitate to reach out at`,
   email: "miftahulrespati@gmail.com",
 };
