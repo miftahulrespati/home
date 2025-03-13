@@ -2,7 +2,7 @@ const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
 const repoURL =
   "https://github.com/miftahulrespati/miftahulrespati.github.io.git";
-const commitMessage = "Add role per project";
+const commitMessage = "Add OpenAI project and add skills";
 
 ghpages.publish(
   pathname,
