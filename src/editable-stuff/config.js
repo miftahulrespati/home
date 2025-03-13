@@ -106,20 +106,29 @@ const projects = {
     {
       name: "OneHCM",
       description: `OneHCM is an end-to-end HR application that provides robust, configurable solutions for various HR transactions.`,
-      client: "Several Clients",
+      client: "Diverse Industries",
       partOf: "WCS",
       role: "Front-end Developer",
       links: [{ anchor: "OneHCM.id", url: "https://www.onehcm.id/" }],
-      technologies: ["React JS"],
+      technologies: ["React.js"],
     },
     {
       name: "OneHCM Face Recognition API",
-      description: `Face Recognition API for OneHCM Clock-In feature.`,
-      client: "Several Clients",
+      description: `Face recognition API for secure clock-in features in OneHCM, improving employee time tracking accuracy.`,
+      client: "Diverse Industries",
       partOf: "WCS",
       role: "Back-end Developer",
       links: null,
       technologies: ["Python", "Flask", "OpenCV"],
+    },
+    {
+      name: "OneHCM OpenAI (ChatGPT) API",
+      description: `OpenAI (ChatGPT) integration for AI-powered data analysis in OneHCM.`,
+      client: "Diverse Industries",
+      partOf: "WCS",
+      role: "Back-end Developer",
+      links: null,
+      technologies: ["Python", "Flask", "OpenAI Platform"],
     },
     {
       name: "Supplier Portal",
@@ -128,7 +137,7 @@ const projects = {
       partOf: "VisioNet",
       role: "Full-stack Developer",
       links: null,
-      technologies: ["C#", ".NET", "React TS", "PostgreSQL"],
+      technologies: ["C#", ".NET", "React TypeScript", "PostgreSQL"],
     },
     {
       name: "Matahari Companion Portal",
@@ -137,7 +146,7 @@ const projects = {
       partOf: "VisioNet",
       role: "Full-stack Developer",
       links: null,
-      technologies: ["C#", ".NET", "React JS", "MySQL", "Linux Server"],
+      technologies: ["C#", ".NET", "React.js", "MySQL", "Linux Server"],
     },
     {
       name: "Mitsubishi Sales Force ID",
@@ -221,20 +230,19 @@ const skills = {
   hardSkills: [
     {
       name: "C# / .NET",
-      value: require("../assets/icon/csharp.png"), // source: "https://icons8.com/icon/55204/c-sharp-logo"
+      value: require("../assets/icon/dotnet-logo.png"), // source: https://github.com/dotnet/brand/tree/main
       isImage: true,
     },
-    { name: "React (JS/TS)", value: "fab fa-react", isImage: false },
+    { name: "React.js", value: "fab fa-react", isImage: false },
     { name: "Python", value: "fab fa-python", isImage: false },
+    { name: "TypeScript", value: require("../assets/icon/ts-logo-128.png"), isImage: true }, // source: https://www.typescriptlang.org/branding/
     { name: "PHP / Laravel", value: "fab fa-laravel", isImage: false },
-    { name: "Go", value: require("../assets/icon/go.png"), isImage: true },
+    { name: "Go", value: require("../assets/icon/Go-Logo_Aqua.png"), isImage: true }, // source: https://go.dev/blog/go-brand
     { name: "HTML & CSS", value: "fas fa-file-code", isImage: false },
-    {
-      name: "GraphQL",
-      value: require("../assets/icon/graphql.png"),
-      isImage: true,
-    },
-    { name: "SQL and NoSQL", value: "fas fa-database", isImage: false },
+    { name: "SQL and RDBMS", value: "fas fa-database", isImage: false },
+    { name: "Git", value: "fab fa-git-square", isImage: false },
+    { name: "Docker / Containerization", value: "fab fa-docker", isImage: false },
+    { name: "Azure DevOps Pipeline", value: "fas fa-infinity", isImage: false },
     { name: "Linux based OS", value: "fab fa-linux", isImage: false },
   ],
   softSkills: [
@@ -295,7 +303,7 @@ const experiences = {
   heading: "Developer Experience",
   data: [
     {
-      role: "Technical Consultant | Full-stack Developer",
+      role: "Full-stack Developer | Technical Consultant",
       companylogo: require("../assets/img/wcs.png"),
       date: "March 2024 - Present",
     },
@@ -305,7 +313,7 @@ const experiences = {
       date: "Dec 2022 - Nov 2023",
     },
     {
-      role: "Web Developer | Software Engineer",
+      role: "Full-stack Developer",
       companylogo: require("../assets/img/refactory.png"),
       date: "Nov 2021 - Oct 2022",
     },
