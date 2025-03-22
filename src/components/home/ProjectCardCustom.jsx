@@ -1,10 +1,19 @@
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
+import { Collapse } from "antd";
 
 const ProjectCardCustom = ({ value }) => {
-  const { name, description, client, partOf, role, links, technologies } =
-    value;
+  const {
+    name,
+    description,
+    client,
+    partOf,
+    role,
+    links,
+    technologies,
+    contributions,
+  } = value;
   return (
     <Col lg={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -17,6 +26,7 @@ const ProjectCardCustom = ({ value }) => {
             {description}
             {links && <CardButtons links={links} />}
           </Card.Text>
+          {contributions && <Contribution contributions={contributions} />}
           <hr />
           <div className="my-3" style={{ height: 42 }}>
             {technologies && <Technology technologies={technologies} />}
@@ -45,6 +55,37 @@ const CardButtons = ({ links }) => {
         );
       })}
     </span>
+  );
+};
+
+const formatText = (text) => {
+  const parts = text.split(/(\*.*?\*|`.*?`)/g); // Split text into bold/code segments
+
+  return parts.map((part, index) => {
+    if (part.startsWith("*") && part.endsWith("*")) {
+      return <strong key={index}>{part.slice(1, -1)}</strong>; // Bold
+    } else if (part.startsWith("`") && part.endsWith("`")) {
+      return (
+        <code key={index} className="bg-gray-100 px-1 rounded">
+          {part.slice(1, -1)}
+        </code>
+      ); // Monospace
+    }
+    return part; // Normal text
+  });
+};
+
+const Contribution = ({ contributions }) => {
+  return (
+    <Collapse>
+      <Collapse.Panel header="Roles and contributions" key="1">
+        <ul>
+          {contributions.map((cont, i) => (
+            <li key={i}>{formatText(cont)}</li>
+          ))}
+        </ul>
+      </Collapse.Panel>
+    </Collapse>
   );
 };
 

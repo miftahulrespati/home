@@ -110,6 +110,12 @@ const projects = {
       partOf: "WCS",
       role: "Front-end Developer",
       links: [{ anchor: "OneHCM.id", url: "https://www.onehcm.id/" }],
+      contributions: [
+        "Developed new features, menus, and pages based on client requirements.",
+        "Convert, refactor, and optimize *100+ files* of Class Component React.js into Functional Components with `React Hooks`.",
+        "Upgraded the project’s React version to ensure compatibility with modern features and best practices.",
+        "Collaborated with front-end developers, using `Git` to manage *version control* and prevent code conflicts.",
+      ],
       technologies: ["React.js"],
     },
     {
@@ -119,6 +125,15 @@ const projects = {
       partOf: "WCS",
       role: "Back-end Developer",
       links: null,
+      contributions: [
+        "Developed a *face recognition API* using the `face_recognition` library.",
+        "Optimized processing speed by up to *20%*, by utilizing `ProcessPoolExecutor`.",
+        "Reduced Docker image size by up to *60%* using *multi-stage builds*, `python-slim`, removing unused dependencing.",
+        "Implemented *CI/CD pipelines in Azure DevOps*, streamlining automated deployments.",
+        "Applied *JWT-based authorization* (`pyjwt`) to enhance security and access control.",
+        "Cache *token JWKS* responses using `TTLCache`.",
+        "Built *API documentation* using `OpenAPI (Swagger)`.",
+      ],
       technologies: ["Python", "Flask", "OpenCV"],
     },
     {
@@ -128,15 +143,27 @@ const projects = {
       partOf: "WCS",
       role: "Back-end Developer",
       links: null,
+      contributions: [
+        "Develop *AI-Powered data analysis* system.",
+        "Integrated the API with the `OpenAI Platform (ChatGPT)`.",
+      ],
       technologies: ["Python", "Flask", "OpenAI Platform"],
     },
     {
-      name: "Supplier Portal",
+      name: "Matahari Supplier Portal",
       description: `Designed for Matahari Department Store and vendors to place direct orders, track order status, and receive reports.`,
       client: "Matahari Department Store",
       partOf: "VisioNet",
       role: "Full-stack Developer",
       links: null,
+      contributions: [
+        "Maintained and fixed bugs in the *legacy* `ASP.NET Framework` application to ensure stability.",
+        "Migrated from ASP.NET Framework to `React.js (TypeScript)` and `.NET 6`, modernizing the platform.",
+        "Implemented `Entity Framework` for efficient database interaction.",
+        "Applied `Dependency Injection` to improve code maintainability and scalability.",
+        "Integrated with external platforms via *XML file transfers over SFTP*.",
+        "Automated scheduled tasks using `crontab`, optimizing background job execution.",
+      ],
       technologies: ["C#", ".NET", "React TypeScript", "PostgreSQL"],
     },
     {
@@ -146,6 +173,13 @@ const projects = {
       partOf: "VisioNet",
       role: "Full-stack Developer",
       links: null,
+      contributions: [
+        "Developed and maintained the application using `Entity Framework` for efficient database management.",
+        "Applied `Dependency Injection` to improve code maintainability and scalability.",
+        "Deployed applications to production `Linux` servers.",
+        "Managed `nginx` as a reverse proxy",
+        "Automated scheduled tasks using `crontab`, optimizing background job execution.",
+      ],
       technologies: ["C#", ".NET", "React.js", "MySQL", "Linux Server"],
     },
     {
@@ -155,6 +189,10 @@ const projects = {
       partOf: "Refactory.id",
       role: "Back-end Developer",
       links: null,
+      contributions: [
+        "Maintained and enhanced a console application using `C# / .NET Core 3.1`.",
+        "Developed a *task scheduler* to automate the execution of `stored procedures`.",
+      ],
       technologies: ["C#", ".NET", "Microsoft SQL Server"],
     },
     {
@@ -165,16 +203,26 @@ const projects = {
       partOf: "Refactory.id",
       role: "Back-end Developer",
       links: null,
+      contributions: [
+        "Developed APIs to support both mobile and web applications.",
+        "Created and optimized `stored procedures`, ensuring efficient database operations and query performance.",
+        "Debugged and fixed issues in stored procedures.",
+        "Integrate with `Google Firebase` for real-time location tracking.",
+      ],
       technologies: ["C#", ".NET", "Microsoft SQL Server", "Google Firebase"],
     },
     {
-      name: "Misteraladin feature: badges",
+      name: "Mister Aladin - Badges Feature",
       description: `New feature of Misteraladin App to show badges, e.g. promotion, on flight and train tickets.`,
       client: "MNC Group",
       partOf: "Refactory.id",
       role: "Back-end Developer",
       links: null,
-      technologies: ["PHP", "Laravel", "MySQL"],
+      contributions: [
+        "Implemented functionality to fetch and manage images from `AWS S3 Storage`.",
+        "Utilized `Eloquent ORM` to interact with a MySQL database, optimizing data queries.",
+      ],
+      technologies: ["PHP", "Laravel", "MySQL", "AWS S3 Storage"],
     },
     {
       name: "Aladinmall Seller Center",
@@ -184,6 +232,11 @@ const projects = {
       partOf: "Refactory.id",
       role: "Back-end Developer",
       links: null,
+      contributions: [
+        "Developed and maintained backend services using `Node.js` with `AWS Amplify`.",
+        "Integrated `GraphQL` to handle API queries and data fetching.",
+        "Worked with `DynamoDB` for NoSQL data storage.",
+      ],
       technologies: [
         "Node.js",
         "AWS Amplify",
@@ -199,7 +252,12 @@ const projects = {
       partOf: "Refactory.id",
       role: "Full-stack Developer",
       links: null,
-      technologies: ["PHP", "Laravel", "PostgreSQL", "Metabase"],
+      contributions: [
+        "Developed and maintained using `Lumen (Laravel)`, implementing the *MVC* architecture.",
+        "Built and optimized `FilamentPHP` components to enhance admin panel functionality.",
+        "Integrated the system with `Metabase` for real-time data visualization and analytics.",
+      ],
+      technologies: ["PHP", "Lumen (Laravel)", "PostgreSQL", "Metabase"],
     },
     {
       name: "Lion Parcel",
@@ -209,6 +267,11 @@ const projects = {
       partOf: "Refactory.id",
       role: "Back-end Developer",
       links: null,
+      contributions: [
+        "Implemented `concurrency` in Go, optimizing performance.",
+        "Developed and maintained a *microservice* architecture.",
+        "Utilized `Redis` for caching and improving data retrieval speed.",
+      ],
       technologies: ["Go", "PostgreSQL", "Redis"],
     },
     {
@@ -218,7 +281,11 @@ const projects = {
       partOf: null,
       role: "Wordpress Developer",
       links: [{ anchor: "Veranita Wang", url: "https://veranitawang.com" }],
-      technologies: ["Wordpress"],
+      contributions: [
+        "Managed *hosting, domain, and cPanel*.",
+        "Developed and customized the website using *WordPress with Oxygen Web Builder*.",
+      ],
+      technologies: ["Wordpress", "Oxygen Web Builder"],
     },
   ],
 };
@@ -235,9 +302,17 @@ const skills = {
     },
     { name: "React.js", value: "fab fa-react", isImage: false },
     { name: "Python", value: "fab fa-python", isImage: false },
-    { name: "TypeScript", value: require("../assets/icon/ts-logo-128.png"), isImage: true }, // source: https://www.typescriptlang.org/branding/
+    {
+      name: "TypeScript",
+      value: require("../assets/icon/ts-logo-128.png"), // source: https://www.typescriptlang.org/branding/
+      isImage: true,
+    },
     { name: "PHP / Laravel", value: "fab fa-laravel", isImage: false },
-    { name: "Go", value: require("../assets/icon/Go-Logo_Aqua.png"), isImage: true }, // source: https://go.dev/blog/go-brand
+    {
+      name: "Go",
+      value: require("../assets/icon/Go-Logo_Aqua.png"), // source: https://go.dev/blog/go-brand
+      isImage: true
+    },
     { name: "HTML & CSS", value: "fas fa-file-code", isImage: false },
     { name: "SQL and RDBMS", value: "fas fa-database", isImage: false },
     { name: "Git", value: "fab fa-git-square", isImage: false },
