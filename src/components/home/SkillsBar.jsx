@@ -1,6 +1,6 @@
 import React from "react";
 
-function SkillsBar({ skill, value, isImage }) {
+function SkillsBar({ skill, value, isImage, link }) {
   return (
     <tr>
       <td width={30} align="center">
@@ -12,7 +12,15 @@ function SkillsBar({ skill, value, isImage }) {
           )}
         </span>
       </td>
-      <td className="pl-2">{skill}</td>
+      <td className="pl-2">
+        {link ? (
+          <a href={link} target="_blank" rel="noreferrer">
+            {skill}
+          </a>
+        ) : (
+          skill
+        )}
+      </td>
     </tr>
   );
 }

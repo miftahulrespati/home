@@ -11,7 +11,8 @@ function SkillsSection({ skills }) {
             key={`${skill}-${index}`}
             skill={skill.name}
             value={skill.value}
-            isImage={skill?.isImage}
+            isImage={skill.isImage}
+            link={skill.link}
           />
         ))}
       </tbody>
