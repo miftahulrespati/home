@@ -372,7 +372,7 @@ const getInTouch = {
   message: `Thanks for taking the time to stop by, and I hope you enjoy your visit! 
             If you like what you see, feel free to get in touch and chat about how we can collaborate.
             I look forward to contributing to your development team. Please don't hesitate to reach out at`,
-  email: "miftahulrespati@gmail.com",
+  email: "hello@miftahulrespati.com",
 };
 
 const experiences = {
