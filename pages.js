@@ -2,7 +2,7 @@ const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
 const repoURL =
   "https://github.com/miftahulrespati/miftahulrespati.github.io.git";
-const commitMessage = "Add contributions per project";
+const commitMessage = "Change email";
 
 ghpages.publish(
   pathname,
