@@ -369,9 +369,8 @@ const skills = {
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
-  message: `Thanks for taking the time to stop by, and I hope you enjoy your visit! 
-            If you like what you see, feel free to get in touch and chat about how we can collaborate.
-            I look forward to contributing to your development team. Please don't hesitate to reach out at`,
+  message: `Thanks for taking the time to stop by, and I hope you enjoy your visit!
+            Please don't hesitate to reach out at`,
   email: "hello@miftahulrespati.com",
 };
 
